@@ -1,11 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+<title>Band Tour Manager</title>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
+
 <body>
-    
+    <main class="container col s6">
+        <nav class="nav-extended col s6">
+            <div class="teal darken-4 nav-wrapper">
+                <a href="#!" class="teal darken-4 brand-logo">Tour</a>
+            </div>
+            <div class="nav-content">
+                <form>
+                    <div class="teal darken-4 input-field">
+                        <input id="search" type="search" required>
+                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                        <i class="material-icons">close</i>
+                    </div>
+                </form>
+            </div>
+        </nav>
+
+        <div class="row">
+            <div class="col s6">
+                <div class="card centered">
+                    <div class="card-image" id="map">
+                        <img class="responsive-img" src="Assets/images/map.svg">
+                    </div>
+                    <span class="card-title">Current Location</span>
+                </div>
+            </div>
+        </div>
+
+        <table class="striped col s6" id="destinations">
+            <thead>
+                <tr>
+                    <th>City</th>
+                    <th>Venue</th>
+                    <th>Distance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Portland</td>
+                    <td>Some Venue</td>
+                    <td>50 miles</td>
+                </tr>
+                <tr>
+                    <td>Tacoma</td>
+                    <td>Tacoma Dome</td>
+                    <td>150 miles</td>
+                </tr>
+                <tr>
+                    <td>Seattle</td>
+                    <td>Paramount Theatre</td>
+                    <td>20 miles</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </body>
+
 </html>

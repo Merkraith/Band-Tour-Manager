@@ -20,23 +20,22 @@ $(document).ready(function () {
   function searchForBand() {
     let artistSearch = $("#search-input").val().trim();
     let bandsintownKey = "cef0c58f01fb18ddece18ed752b9c2d2";
-    let queryURL = `https://rest.bandsintown.com/artists/${artistSearch}/events/?app_id=${bandsintownKey}`;
+    let queryURL = `https://bands.alex-hansen.com/artists/${artistSearch}/events/?app_id=${bandsintownKey}`;
     $.ajax({
       url: queryURL,
-      method: "GET", cors: true, secure: true, headers: { 'Access-Control-Allow-Origin': '*' }, crossDomain:true
+      method: "GET", 
     }).then(function (response) {
-
       console.log(response);
-
     });
   }
-  // //return band in town band data from event 
-  // //object will get city, from city, we'll get geocode, geocode will then populate on map 
-  // // mapbox api
-  // function renderMap() {
+  // renderMap()
+  // // //return band in town band data from event 
+  // // //object will get city, from city, we'll get geocode, geocode will then populate on map 
+  // //  mapbox api
+  //  function renderMap() {
   //   mapboxgl.accessToken = 'pk.eyJ1Ijoiam9zZXBoYnJpbWV5ZXIiLCJhIjoiY2s5cHZqOGQ5MDd6ZjNtbHp1dGx0aGp1MSJ9.LFiwHWlUhkLBhQsprDvCnA';
   //   var map = new mapboxgl.Map({
-  //     container: 'map',
+  //     container: '("#map")',
   //     style: 'mapbox://styles/mapbox/streets-v11',
   //     center: [12.550343, 55.665957],
   //     zoom: 8

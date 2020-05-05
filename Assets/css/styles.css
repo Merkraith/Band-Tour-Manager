@@ -3,3 +3,30 @@
     color: black;
 }
 
+#result-band {
+    padding-bottom: 5px;
+}
+
+@media (min-width:768px){
+    nav{
+        display: block !important;
+    }
+}
+
+#bandsintown {
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#searchbar {
+    margin-top: auto;
+}
+
+#titlebar {
+    margin-bottom: auto;
+}
+
+#map {
+    max-width: 50%;
+    max-height: 50%
+}

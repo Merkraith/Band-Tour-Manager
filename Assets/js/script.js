@@ -44,8 +44,19 @@ $(document).ready(function () {
             console.log(response[0].venue.city);
             let momentVar = moment().format('dddd, MMMM Do, YYYY h:mm a');
             console.log(momentVar);
-            let timeCard = $("#time-result").text(("Date: " + response[0].datetime)).moment().format("MM/DD/YYYY");
+           
+            let gigDate = moment(response[0].datetime).format('LLL');
+            $("#time-result").text(gigDate);
             console.log(response[0].datetime);
+
+            // let gigDate = response[0].datetime.split(' ')[0];
+            console.log(gigDate);
+            let realGigDate = gigDate.moment().format('LLL');
+            console.log(realGigDate);
+            
+            // console.log(realGigDate);
+
+
             // Append the newly created data together in card
             cardRow.append(bandNameCardard, venueCard, addressCard, cityCard, timeCard);
             // Append the card data to card body 

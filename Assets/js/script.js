@@ -34,7 +34,6 @@ let lon;
         event.preventDefault();
 
         searchForBand()
-        renderVenue()
 
       })
       //bandsintown API call.....

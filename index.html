@@ -70,9 +70,14 @@
                 <script>
                     mapboxgl.accessToken = 'pk.eyJ1Ijoiam9zZXBoYnJpbWV5ZXIiLCJhIjoiY2s5cHZqOGQ5MDd6ZjNtbHp1dGx0aGp1MSJ9.LFiwHWlUhkLBhQsprDvCnA';
                     var map = new mapboxgl.Map({
-                        container: 'map',
-                        style: 'mapbox://styles/mapbox/streets-v9'
+                        container: 'map', // container id
+                        style: 'mapbox://styles/mapbox/streets-v11',  //stylesheet location
+                        center: [-122.331356, 47.613245],  //starting position [lng , lat]
+                        zoom: 9  //starting zoom
                     });
+                    var marker = new mapboxgl.Marker()
+                    .setLngLat([-122.331356, 47.613245])
+                    .addTo(map);
                 </script>
 
             </div>

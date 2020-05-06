@@ -60,25 +60,12 @@
                 </div>
             </form>
         </div>
-
-
         <div class="row">
             <div class="col s12">
 
                 <!-- insert map api call html here -->
                 <div id='map' style='width: 400px; height: 300px;'></div>
-                <script>
-                    mapboxgl.accessToken = 'pk.eyJ1Ijoiam9zZXBoYnJpbWV5ZXIiLCJhIjoiY2s5cHZqOGQ5MDd6ZjNtbHp1dGx0aGp1MSJ9.LFiwHWlUhkLBhQsprDvCnA';
-                    var map = new mapboxgl.Map({
-                        container: 'map', // container id
-                        style: 'mapbox://styles/mapbox/streets-v11',  //stylesheet location
-                        center: [-122.331356, 47.613245],  //starting position [lng , lat]
-                        zoom: 9  //starting zoom
-                    });
-                    var marker = new mapboxgl.Marker()
-                    .setLngLat([-122.331356, 47.613245])
-                    .addTo(map);
-                </script>
+
 
             </div>
         </div>
@@ -92,7 +79,7 @@
                         <p id="venue-result">Venue:</p>
                         <p id="address-result">Address:</p>
                         <p id="city-result">City:</p>
-                        
+
                     </div>
                 </div>
             </div>

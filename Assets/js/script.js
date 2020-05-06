@@ -51,8 +51,6 @@ $(document).ready(function () {
 
             // let gigDate = response[0].datetime.split(' ')[0];
             console.log(gigDate);
-            let realGigDate = gigDate.moment().format('LLL');
-            console.log(realGigDate);
             
             // console.log(realGigDate);
 

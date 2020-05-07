@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
 
-    <title>Band Tour Manager</title>
+    <title>Find The Next Gig</title>
     <link rel="stylesheet" href="./assets/css/styles.css">
     <style>
         body {
@@ -41,25 +41,32 @@
         <div class="row" id="titlebar">
             <nav class="col s12 teal darken-4">
                 <div class="nav-wrapper teal darken-4">
-                    <a class="brand-logo center" id="bandsintown">Band Finder</a>
+                    <a class="brand-logo center" id="bandsintown">Find Next Gig</a>
                 </div>
             </nav>
         </div>
-
+        
+        <!-- Search Input Bar -->
         <div class="row" id="searchbar">
             <form class="col s12">
                 <div class="row teal darken-4">
                     <div class="input-field col s9">
-                        <input id="search-input" type="text" class="validate">
-                        <label for="email_inline">Search</label>
+                        <input id="search-input" type="search" required>
+                        <label class="label-icon" for="search"></label>
+                        <i class="material-icons">close</i>
                     </div>
                     <div class="input-field col s3">
                         <button class="waves-effect waves-light btn" id="searchBtn"><i
-                                class="material-icons right">search</i></button>
+                                class="material-icons right">search</i>
+                        </button>
                     </div>
                 </div>
             </form>
         </div>
+
+        <!-- Empty Div for Sorry Card -->
+        <div id="sorry"></div>
+
         <div class="row">
             <div class="col s12">
                 <!-- <div class="col s6 offset-s3 valign"> -->
@@ -74,7 +81,7 @@
             <div class="col s12">
                 <div class="card teal darken-4">
                     <div class="card-content white-text">
-                        <span class="card-title white-text" id="band-result">Band:</span>
+                        <span class="card-title white-text" id="band-result"></span>
                         <p id="time-result">Time:</p>
                         <p id="venue-result">Venue:</p>
                         <p id="address-result">Address:</p>

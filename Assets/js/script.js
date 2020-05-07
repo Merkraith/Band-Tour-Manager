@@ -32,7 +32,8 @@ function renderMap() {
 $("#searchBtn").on("click", function (event) {
   event.preventDefault();
 
-  searchForBand()
+  searchForBand();
+  $("#artist-search").empty();
 
  
 })
@@ -46,11 +47,15 @@ function searchForBand() {
     method: "GET",
   }).then(function (response) {
 
-    //  if (response === null) {
-    //   let sorryCard = $("<h1>").text("Sorry," + bandNameCard + "does not have any shows sheduled.");
-    //     cardBody.style.visibility = "hidden";
-    //     sorryCard.style.visibility = "visible";
-    //  }
+     if (response[0] === undefined) {
+      // let sorryCard = $("<h1>").text("Sorry," + bandNameCard + "does not have any shows sheduled.");
+        // cardBody.style.visibility = "hidden";
+        // sorryCard.style.visibility = "visible";
+        alert("Sorry, we have no upcoming shows!");
+        $("#search-input").val("");
+        return;
+        
+     }
 
     //  else (respons !== null) {
     //   lat = response[0].venue.latitude;
@@ -79,15 +84,17 @@ function searchForBand() {
     // let gigDate = response[0].datetime.split(' ')[0];
     console.log(gigDate);
     // Append the newly created data together in card
-    cardRow.append(bandNameCard, venueCard,  cityCard);
+    cardRow.append(bandNameCard, venueCard, cityCard);
     // Append the card data to card body 
     cardBody.append(cardRow);
-    // addressCard,
+    
+    // getAddress(responseLong, responseLat)
     renderVenue(response);
   })
 };
 
 function renderVenue(response) {
+  $("#artist-search").empty();
   mapboxgl.accessToken = 'pk.eyJ1Ijoiam9zZXBoYnJpbWV5ZXIiLCJhIjoiY2s5cHZqOGQ5MDd6ZjNtbHp1dGx0aGp1MSJ9.LFiwHWlUhkLBhQsprDvCnA';
   var map = new mapboxgl.Map({
     container: 'map', // container id
@@ -105,18 +112,27 @@ function renderVenue(response) {
     .addTo(map);
 
   getAddress(responseLong, responseLat);
-
+  $("#search-input").val("");
 }
 function getAddress(responseLong, responseLat) {
   console.log("we're there");
   $.get(
     "https://api.mapbox.com/geocoding/v5/mapbox.places/" +
     responseLong + "," + responseLat + ".json?access_token=" + mapboxgl.accessToken,
-    function (getStreetAddress) {
+    function (response) {
+      let gigAddress = $("#address-result").text("Address: " + response.features[0].place_name); 
+      console.log(response);
+      console.log(gigAddress);
       console.log("we're here");
-      console.log(getStreetAddress);
-    }
-  ).fail(function (jqXHR, textStatus, errorThrown) {
+      
+    })
+  .fail(function (jqXHR, textStatus, errorThrown) {
     alert("There was an error while geocoding: " + errorThrown);
-  });
+  });  
+  printCard();
+}
+
+function printCard(){ 
+
+
 }

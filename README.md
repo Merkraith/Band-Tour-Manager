@@ -3,7 +3,7 @@
 
 # User Story
 
-*As a music fanatic want to be able to search for a band I like and immediately see when and where their next show is.*  
+*As a music fanatic, I want to be able to search for a band I like and immediately see when and where their next show is.*  
 
 
 # Usage
@@ -64,9 +64,11 @@ As a band on tour, I want to see my entire tour mapped out with hotel, restauran
 **Directions for future development:**
 1. Develop a  map view for the user to see the entire tour mapped out on the map display in order of tour dates. 
 
-2. Develop a for loop for the events response that returns all of that band or musicians tour dates. Each date in the list should be  clickable and bring the user to more details about that concert.
+2. Add a zoom level function so that map zooms in on location when result is returned.
 
-3. Each event response should include the city, venue, drive time and distance between shows. When the event is clicked, details about that event should expand and let the user know when they need to leave their current city in order to make their next sound check, interview or show on time. 
+3. Develop a for loop for the events response that returns all of that band or musicians tour dates. Each date in the list should be  clickable and bring the user to more details about that concert.
 
-4. Within the same response for each city, there should be restaurant, hotel, and bar suggestions for the band. 
+4. Each event response should include the city, venue, drive time and distance between shows. When the event is clicked, details about that event should expand and let the user know when they need to leave their current city in order to make their next sound check, interview or show on time. 
+
+5. Within the same response for each city, there should be restaurant, hotel, and bar suggestions for the band. 
 

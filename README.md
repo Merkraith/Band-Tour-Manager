@@ -1,12 +1,12 @@
 # "Find Next Gig"
 
 
-## User Story
+# User Story
 
 *As a music fanatic want to be able to search for a band I like and immediately see when and where their next show is.*  
 
 
-## Usage
+# Usage
 
 Instructions | Pictures
 ------------ | -------------
@@ -18,7 +18,9 @@ If the band or artist you are searching for is not found, or has no gigs coming 
 
 
 
-## Credits
+
+
+# Credits
 
 **Find Next Gig** was a project of aspiring full stack web developers, these are their **GitHub Pages**:
 
@@ -29,7 +31,8 @@ https://github.com/kaitekelly - Katie Kelly
 https://github.com/Merkraith - Mark Heil
 
 
-### API's used in this project were: ###
+
+## API's used in this project were:
 
 
 **Bands In Town API**
@@ -43,9 +46,14 @@ https://docs.mapbox.com/api/
 
 
 
-## Contributing
+## Css Libarary Used 
 
-### Directions for Future Development ###
+https://materializecss.com/
+
+
+# Contributing
+
+## Directions for Future Development 
 
 **Concept:** 
 Wanted to create an app for bands who act as their own tour managers to make it easier to plan out directions and drive times for an entire tour. 
@@ -53,7 +61,7 @@ Wanted to create an app for bands who act as their own tour managers to make it 
 **Future User Story:**
 As a band on tour, I want to see my entire tour mapped out with hotel, restaurant, and bar options in close proximity to the venues, so that I am on time for my sound checks, interviews and performances. 
 
-**Directions for future development:** 
+**Directions for future development:**
 1. Develop a  map view for the user to see the entire tour mapped out on the map display in order of tour dates. 
 
 2. Develop a for loop for the events response that returns all of that band or musicians tour dates. Each date in the list should be  clickable and bring the user to more details about that concert.

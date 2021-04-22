@@ -1,5 +1,5 @@
 let searchResults = [];
-let bandsintownKey = "98be37a3554e53a3d70cf973e8da57cb";
+let bandsintownKey = "9454c91b423621457f871d1a1dba2ca5";
 let lat;
 let lon;
 
@@ -29,7 +29,7 @@ $("#searchBtn").on("click", function (event) {
 //bandsintown API call.....
 function searchForBand() {
   let artistSearch = $("#search-input").val().trim();
-  let bandsintownKey = "98be37a3554e53a3d70cf973e8da57cb";
+  let bandsintownKey = "9454c91b423621457f871d1a1dba2ca5";
   let queryURL = `https://bands.alex-hansen.com/artists/${artistSearch}/events/?app_id=${bandsintownKey}`;
   $.ajax({
     url: queryURL,
